@@ -1,0 +1,196 @@
+<!DOCTYPE>
+<html>
+<head>
+		<title>社區通</title>
+		<meta charset = "utf-8">
+	
+	<style type = "text/css">
+	body
+	{	
+		margin:auto;
+	}
+	#top-header
+	{
+		max-width: 100%;
+		width: 100%; 	
+		background-image:url(pic/p6.jpg);
+	}
+	.logo
+	{
+		display : inline-block;
+	}
+	.abcd
+	{
+		display : inline-block;
+	}
+	.action
+	{
+		color: #fff;
+		text-decoration: underline;
+	}
+	#middle-body
+	{
+		background-color:#e9e9e9;
+		max-width: 100%;
+		width: 100%;
+		height:auto;
+	}
+	.div_box1
+	{
+		
+	}	
+	#my_div
+	{
+		margin-left:0;
+	}	
+	.div_box2
+	{
+		height:auto;
+	}
+	.board
+	{
+		display:inline-block;
+	}
+	.content
+	{
+		display:inline-block;
+		position:relative;
+		left:5%;
+	}
+	a
+	{
+		font-size : 25;
+		color : black;
+	}
+	#car
+	{
+		border:1px solid;
+		width:auto;
+		height:auto;
+	}
+	</style>
+<script type="text/javascript">
+        var jsImg = new Array("p1.jpg","p2.jpg","p3.jpg","p4.jpg","p5.jpg");
+        var jsImg_len = jsImg.length;  // 圖檔數量
+        // 要用另一個變數存，是不想在 function 中每次都要算陣列的大小
+        var i=2;                       //起始照片  2 為 003.jpg
+        //設定每兩秒執行一次sequentialImg() ，此行要在 function 之外
+        setInterval("sequentialImg()",2500);
+        function sequentialImg(){  //循序播放
+            document.getElementById("my_div").innerHTML  = "<img src='"+jsImg[i]+"' width=600 height=300>";        
+                i++;
+                if(i>=jsImg_len)  i=0;
+        }
+</script>
+<script>
+	function changetime()
+		{
+			var now = new Date();
+			var date = now.getDate();
+			var time =parseInt(date);
+			var nowtime = (time%10);
+			switch (nowtime)
+			{
+				case 0:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>我要講一個關於我老二的故事。</p><p>太長了，我不想說。</p>");
+					break;
+				case 1:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>有一個啊北跑到隧道裡。</p><p>他大喊一聲：「屋郎低哩謀？」</p><p>遠方傳來了嗚~~~~~~~</p><p>然後啊北就被火車撞死了。</p>");
+					break;
+				case 2:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>小明跟火車賽跑，最後小明贏了，為什麼？</p><p>因為小明真的跑得很快。</p>");
+					break;
+				case 3:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>小明說：「你美爆了」。</p><p>小美說「謝謝。」</p>");
+					break;
+				case 4:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>小明問小美說：「有人說過你唱歌很好聽嗎？」</p><p>小美害羞的說：「沒有」。</p><p>小明就說：「那你他媽的怎麼不閉嘴？」</p>");
+					break;
+				case 5:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>小明感冒去看醫生，醫生說你喉嚨發炎。</p><p>喉嚨說嗨。</p>");
+					break;
+				case 6:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>小明去吉野家</p><p>野家判賠五十萬。</p>");
+					break;
+				case 7:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>小鹿斑比的哥哥是誰？</p><p>「大陸尋奇」</p>");
+					break;
+				case 9:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>有一天記者到南極採訪企鵝，問企鵝平常在做什麼事。</p><p>第一隻企鵝回答說：「吃飯幹活打東東」</p><p>第二隻企鵝回答說：「吃飯幹活打東東」</p><p>第三隻企鵝回答說：「吃飯幹活打東東」</p><p>到第四隻企鵝時發現他在哭，於是記者向前問</p><p>「你怎麼在哭？你就是東東嗎」</p><p>企鵝哭著回答說：「不，我是活。」</p>");
+					break;
+				case 8:
+					document.getElementById("car").innerHTML=("<p>每日一笑話：</p><p>小美對小明說：「哈囉！」</p>小明說：「好啊！」</p>");
+					break;
+				
+			}
+			
+		}
+</script>
+	<script src = "project.js"></script>
+</head>
+	
+<body onload="sequentialImg(); changetime()" >
+	<!-- header -->
+	<div id = "top-header"   >
+		<div class = "logo">
+			<a href = "test.html"><img src = "image.png" alt = "LOGO" style = "margin-left:10px"  ></a> <img src = "image3.png" alt = "LOGO" style = "margin-left:350px"/>
+		</div>
+	</div>
+			
+	<div id = "middle-body">	
+		
+		<div class = "div_box1">
+		<div id = "my_div" style = "display:inline-block"></div>
+		<div style = "position : absolute; top : 16%; left :39% ; font-size : 30px"><strong>最新消息：</strong></div>
+		<div style = "border:1px solid;width:600px;height:600px;background-color:#FFFFFF;padding:5px;overflow:auto;position:absolute;left:39%;top:20%;">
+		<img src = "new1.jpg" width = 250; height = 250;><a href = "https://udn.com/news/story/7323/3845522" style = "font-size:20;position : absolute ; top : 10%;">柯文哲談民生汐止線：<br>那條等於盲腸 沒有用</a>
+		<br>-------------------------------------------------------------------------------------------------------------<br><img src = "new2.jpg" width = 250; height = 250;><a href = "https://www.walkerland.com.tw/article/view/225624" style = "font-size:20;position : absolute ; top : 55%;">［民生東路美食／松山區火鍋］幕間一鍋炙燒火鍋專賣店。新式精緻火鍋體驗</a>
+		<br>-------------------------------------------------------------------------------------------------------------<br><img src = "new3.jpg" width = 250; height = 250;><a href = "https://www.ettoday.net/news/20190517/1447055.htm" style = "font-size:20;position : absolute ; top : 105%;">補血打你啦！寶可夢訓練家「浴血搶道館」互告傷害　餅王老闆現身：我被挑釁</a>
+		<br>-------------------------------------------------------------------------------------------------------------<br><img src = "new4.jpg" width = 250; height = 250;><a href = "https://www.ettoday.net/news/20180602/1182397.htm" style = "font-size:20;position : absolute ; top : 145%;">「下面好癢」富錦街35秒裸拍片瘋傳　24歲風衣妹求：別告訴我家人</a>
+		</div>
+		<div style = "display:inline-block ; position : absolute ; left :85%; top : 15%;">
+			<ul>
+				<li  style ="display:inline" >
+					<a href="test.html">社區介紹</a>
+				</li>
+				<li  style ="display:inline">
+					<a href="food.html">美食</a>
+				</li>
+				<li  style ="display:inline">
+					<a href="fun.html">玩樂</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+			<br>
+			<div>
+				<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Filoveminsheng%2F&tabs=timeline&width=300&height=250&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+			<br>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.2510957418212!2d121.56058901537914!3d25.059477243422773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab8d9d238e55%3A0x3c19f236bf0fecac!2z5rCR55Sf56S-5Y2A5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1560808479200!5m2!1szh-TW!2stw" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+			
+			
+			<div style = "position : absolute; left : 83%; top : 30%">
+		
+				<form action = "#" style = " line-height:25px;">
+					<textarea id = "Create_post" rows="3" cols="20" placeholder = "說點什麼吧.."></textarea>
+					<p><input type = "button" value = "留言" id = "saveButton"></p>
+				</form>
+		
+			<table border = "1" width="300">
+					<h2>留言板</h2>
+				<thead>
+					<tr align = "middle" id = "headrow">
+						<td width="300">貼文</td>
+						<td width="50">刪除</td>
+					</tr>
+				</thead>
+				<tbody align = "right" id = "post_data"></tbody>
+			</table>
+			</div>
+			</div>	
+			<div id="car" style = "position : absolute; left : 17%; top :50%"></div>
+			
+	</div>
+
+</body>
+</html>
