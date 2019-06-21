@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+<head>
+		<title>社區通</title>
+		<meta charset = "utf-8">
+	<script src="ajax.js"></script>
+	<style type = "text/css">
+	body
+	{	
+		margin:auto;
+	}
+	#top-header
+	{
+		max-width: 100%;
+		width: 100%;
+		background-image:url(pic/p6.jpg);
+	}
+	a
+	{
+		font-size : 25;
+	}
+	</style>
+	
+<body>
+		<!-- header -->
+	<div id = "top-header" >
+		<div class = "logo">
+			<a href = "test.html"><img src = "image.png" alt = "LOGO" style = "margin-left:10px"></a>
+		</div>
+		<div style = "display:inline-block ; position : absolute ; left :85%; top : 15%;">
+			<ul>
+				<li  style ="display:inline" >
+					<a href="test.html">社區介紹</a>
+				</li>
+				<li  style ="display:inline">
+					<a href="food.html">美食</a>
+				</li>
+				<li  style ="display:inline">
+					<a href="fun.html">玩樂</a>
+				</li>
+			</ul>
+		</div>
+	</div> 
+	
+			<!-- body -->
+	<form action = "park.php" method = "post">
+	<input type = "hidden" class = "btn" value = "公園" name = "park">
+	<input type = "submit"   class = "btn"  value = "" style = "background-image:url(pic/park.jpg);width:630;height:500;position:absolute;left:10%; top : 30%">
+	</form>
+	<form action = "others.php" method = "post">
+	<input type = "hidden" class = "btn" value = "其他" name = "others">
+	<input type = "submit"   class = "btn"  value = "" style = "background-image:url(pic/other.jpg);width:630;height:500;position:absolute;left :59%; top : 30%">
+	</form>
+</body>
+</html>
